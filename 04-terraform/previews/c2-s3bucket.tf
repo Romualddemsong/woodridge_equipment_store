@@ -1,8 +1,8 @@
 # because bucket name must be globally unique we need to generate a random name reason why we are using the random resource block
 resource "random_string" "random" {
   length  = 16
-  Upper   = False
-  special = False
+  upper   = false
+  special = false
 }
 
 

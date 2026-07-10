@@ -1,1 +1,6 @@
-terraform/c4-provider.tf
+**/.terraform/
+*.tfstate
+*.tfstate.*
+
+
+
