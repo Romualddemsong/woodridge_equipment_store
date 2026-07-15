@@ -13,9 +13,10 @@ resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.main.id
   tags   = merge(var.tags, { Name = "${var.environment_name}-igw" })
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false  #should be enabled in a pod environment as this prevent accidental deletion
   }
 }
+
 
 #resource 3 = public subnet
 resource "aws_subnet" "public" {
