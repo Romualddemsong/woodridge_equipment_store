@@ -12,7 +12,7 @@ terraform {
   }
   
   backend "s3" {
-  bucket = "my-tf-test-bucket-agmyrp9ewl2swp7aue"
+  bucket = "my-tf-test-bucket-r7dvua4lx4o493id-dev"
   key = "vpc/dev/terraform.tfstate"
   region = "us-east-2"
   encrypt = true
@@ -23,7 +23,7 @@ terraform {
 }
 
 provider "aws"{
-    region = var.region
+
 }
 
 

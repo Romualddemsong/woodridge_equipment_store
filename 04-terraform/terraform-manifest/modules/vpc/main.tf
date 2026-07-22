@@ -6,7 +6,7 @@ resource "aws_vpc" "main" {
   enable_dns_hostnames = true
   tags                 = merge(var.tags, { Name = "${var.environment_name}-vpc" })
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
 }
 
