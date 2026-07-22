@@ -5,6 +5,9 @@ resource "aws_vpc" "main" {
   enable_dns_support   = true
   enable_dns_hostnames = true
   tags                 = merge(var.tags, { Name = "${var.environment_name}-vpc" })
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
 #resource 2 = internet gateways
