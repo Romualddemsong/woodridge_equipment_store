@@ -8,7 +8,7 @@ resource "random_string" "random" {
 
 # Provision an S3 bucket to store the Terraform state file
 resource "aws_s3_bucket" "tfstate_bucket" {
-  bucket = "my-tf-test-bucket-${random_string.random.result}"
+  bucket = "my-tf-test-bucket-${random_string.random.result}-${var.environment_name}"
 
   lifecycle {
     # In production, this should be true to prevent accidental deletion
